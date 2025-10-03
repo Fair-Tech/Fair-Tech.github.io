@@ -1,15 +1,1578 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SplitStream</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <h1>SplitStream</h1>
-    <p>Send your controller inputs to the host! Play splitscreen games over Discord!</p>
-    <div id="status">Status: Not connected</div>
-    <script src="script.js"></script>
-</body>
+<!doctype html>
+<html
+  lang="en"
+  data-ws-project="ee91f75d-b737-4ce9-9806-35d32a2dc75c"
+  data-ws-last-published="2025-10-03T08:55:43.685Z"
+>
+  <head>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/assets/static/app_generated_index-6937cd5a.B3W203s6.css"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link
+      rel="preload"
+      as="image"
+      imagesrcset="/assets/FairTech_raMC7uHiQEOXX9JDI2FdR.png 16w, /assets/FairTech_raMC7uHiQEOXX9JDI2FdR.png 32w, /assets/FairTech_raMC7uHiQEOXX9JDI2FdR.png 48w, /assets/FairTech_raMC7uHiQEOXX9JDI2FdR.png 64w, /assets/FairTech_raMC7uHiQEOXX9JDI2FdR.png 96w, /assets/FairTech_raMC7uHiQEOXX9JDI2FdR.png 128w, /assets/FairTech_raMC7uHiQEOXX9JDI2FdR.png 256w"
+      imagesizes="100vw"
+    />
+    <meta property="og:url" content="https://url/" />
+    <title>FairTech - Developing Creatively</title>
+    <meta property="og:title" content="FairTech - Developing Creatively" />
+    <meta
+      name="description"
+      content="Crafting unique experiences where technologies meet creativity!"
+    />
+    <meta
+      property="og:description"
+      content="Crafting unique experiences where technologies meet creativity!"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="FairTech Digital" />
+    <meta property="og:image" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="/assets/FairTech_raMC7uHiQEOXX9JDI2FdR.png" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "FairTech Digital",
+        "url": "https://url"
+      }
+    </script>
+  </head>
+  <body id="top" class="w-body">
+    <div class="w-box">
+      <div
+        class="w-box c1yfl7fw cn71n9k c1huoeh1 c5qlxwb c1ebm6y8 cdl2bus cj34jm2 c18rktfk c84wvpq c1ne4eqp ca41yuz cakwgzf c2yw1lo"
+      >
+        <div class="w-box c1xao0k c1uq34ol c6whyv0"></div>
+        <div class="w-box c5qlxwb c1ebm6y8">
+          <a
+            aria-label="discord"
+            href="https://discord.com/users/208128859659436033"
+            class="w-link cgg0cjq coihofk corflgn czz9uik c17a9n8r c1jnjhm8 ce2rdc6 c15sv5nh cwjsmmv c1q66ssy c1g92ibl c1vhknwd c1r6fq11 cav5p01 ct23i2i ce1fn2e caf16cd c18rktfk c84wvpq cdl2bus cj34jm2 c4w9dvh cmnvdng cmx0y4p clfgpzr c1blz2mu c1uq1rj2 c1jzcjcx c7ndemy c1j1a12c crut9sn c27bmu1 cpehn13 cs4dhp2 cs7du7t"
+            ><div
+              class="w-box c1nk90pb che3jd7 c1w5h4gn co6lsyh c1bj05rc ch1cxiy c11efedb c1x0ieji c127kdo1"
+            >
+              <div class="w-html-embed">
+                <svg
+                  width="100%"
+                  height="100%"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M24.1641 7.65906C22.543 6.87826 20.8325 6.32099 19.0751 6.00114C19.0592 5.99832 19.0428 6.00076 19.0283 6.0081C19.0137 6.01544 19.0017 6.02733 18.9938 6.04214C18.7735 6.45211 18.5298 6.98835 18.3595 7.40816C16.4651 7.10643 14.5383 7.10643 12.6439 7.40816C12.4539 6.9405 12.239 6.48443 12.0002 6.04214C11.9922 6.02749 11.9801 6.01574 11.9656 6.00842C11.9511 6.0011 11.9348 5.99856 11.9189 6.00114C10.1611 6.31928 8.45021 6.87684 6.82991 7.65906C6.81605 7.66461 6.80445 7.67504 6.7971 7.68858C3.55651 12.7706 2.66745 17.7279 3.10339 22.623C3.10495 22.6459 3.11901 22.6689 3.1362 22.6836C5.02325 24.1507 7.13396 25.2708 9.37832 25.9962C9.39417 26.0014 9.4112 26.0013 9.42693 25.9957C9.44267 25.99 9.45629 25.9793 9.46582 25.965C9.94707 25.2763 10.3752 24.5498 10.7439 23.7856C10.7516 23.7699 10.7543 23.752 10.7514 23.7345C10.7486 23.7171 10.7405 23.7011 10.7283 23.6889C10.7202 23.6809 10.7107 23.6747 10.7002 23.6708C10.027 23.3993 9.37503 23.0731 8.7502 22.6951C8.73275 22.6847 8.71977 22.6677 8.71395 22.6476C8.70814 22.6274 8.70993 22.6057 8.71895 22.5869C8.72427 22.5747 8.73231 22.564 8.74239 22.5557C8.87364 22.4524 9.00489 22.3442 9.12989 22.236C9.14093 22.2266 9.15418 22.2206 9.16821 22.2186C9.18225 22.2166 9.19655 22.2186 9.20957 22.2245C13.3017 24.1858 17.7314 24.1858 21.7735 22.2245C21.787 22.2183 21.8018 22.2162 21.8164 22.2182C21.831 22.2202 21.8448 22.2264 21.8563 22.236C21.9813 22.3442 22.1126 22.4524 22.2438 22.5557C22.2544 22.5639 22.263 22.5747 22.2687 22.5872C22.2744 22.5996 22.277 22.6134 22.2764 22.6272C22.2758 22.641 22.2719 22.6544 22.2651 22.6663C22.2584 22.6781 22.2489 22.688 22.2376 22.6951C21.6142 23.0765 20.9614 23.4024 20.286 23.6692C20.2752 23.6733 20.2655 23.6798 20.2574 23.6883C20.2493 23.6968 20.243 23.7071 20.2391 23.7184C20.2355 23.7294 20.2341 23.741 20.2349 23.7525C20.2357 23.7641 20.2387 23.7754 20.2438 23.7856C20.6188 24.5482 21.0485 25.2763 21.5204 25.965C21.5299 25.9793 21.5435 25.99 21.5593 25.9957C21.575 26.0013 21.592 26.0014 21.6079 25.9962C23.856 25.2731 25.9701 24.1528 27.8594 22.6836C27.8688 22.6768 27.8767 22.6677 27.8824 22.6572C27.8881 22.6467 27.8914 22.635 27.8922 22.623C28.4141 16.9637 27.0188 12.0474 24.1954 7.69022C24.1925 7.68302 24.1883 7.67653 24.1829 7.67116C24.1775 7.66579 24.1711 7.66167 24.1641 7.65906ZM11.3549 19.6417C10.1221 19.6417 9.10801 18.4544 9.10801 16.9982C9.10801 15.5403 10.1033 14.353 11.3549 14.353C12.6158 14.353 13.6205 15.5502 13.6017 16.9982C13.6017 18.4544 12.6064 19.6417 11.3549 19.6417ZM19.661 19.6417C18.4298 19.6417 17.4142 18.4544 17.4142 16.9982C17.4142 15.5403 18.4095 14.353 19.661 14.353C20.922 14.353 21.9282 15.5502 21.9079 16.9982C21.9079 18.4544 20.922 19.6417 19.661 19.6417Z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+              </div></div></a
+          ><a
+            aria-label="email"
+            href="mailto:Nick@FairTech.space?subject=Website+Contact"
+            class="w-link cgg0cjq coihofk corflgn czz9uik c17a9n8r c1jnjhm8 ce2rdc6 c15sv5nh cwjsmmv c1q66ssy c1g92ibl c1vhknwd c1r6fq11 cav5p01 ct23i2i ce1fn2e caf16cd c18rktfk c84wvpq cdl2bus cj34jm2 c4w9dvh cmnvdng cmx0y4p clfgpzr c1blz2mu c1uq1rj2 c1jzcjcx c7ndemy c1j1a12c crut9sn c27bmu1 cpehn13 cs4dhp2 cs7du7t"
+            ><div
+              class="w-box c1nk90pb che3jd7 c1w5h4gn co6lsyh c1bj05rc ch1cxiy c11efedb c1x0ieji c127kdo1"
+            >
+              <div class="w-html-embed">
+                <svg
+                  width="100%"
+                  height="100%"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5.07187 9.20292C5.2168 8.57709 5.57307 8.01832 6.08232 7.6181C6.59158 7.21789 7.22365 6.99996 7.875 7H25.125C25.7764 6.99996 26.4084 7.21789 26.9177 7.6181C27.4269 8.01832 27.7832 8.57709 27.9281 9.20292L16.5 16.0865L5.07187 9.20292ZM5 10.8207V20.8847L13.3418 15.8442L5 10.8207ZM14.7189 16.6758L5.27456 22.3807C5.50791 22.8657 5.87619 23.2753 6.33656 23.5619C6.79693 23.8486 7.33044 24.0005 7.875 24H25.125C25.6695 24.0001 26.2028 23.8479 26.6629 23.561C27.123 23.274 27.491 22.8643 27.724 22.3793L18.2796 16.6744L16.5 17.7468L14.7189 16.6744V16.6758ZM19.6582 15.8457L28 20.8847V10.8207L19.6582 15.8442V15.8457Z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+              </div></div></a
+          ><a
+            aria-label="github"
+            href="https://github.com/Fair-Tech"
+            class="w-link cgg0cjq coihofk corflgn czz9uik c17a9n8r c1jnjhm8 ce2rdc6 c15sv5nh cwjsmmv c1q66ssy c1g92ibl c1vhknwd c1r6fq11 cav5p01 ct23i2i ce1fn2e caf16cd c18rktfk c84wvpq cdl2bus cj34jm2 c4w9dvh cmnvdng cmx0y4p clfgpzr c1blz2mu c1uq1rj2 c1jzcjcx c7ndemy c1j1a12c crut9sn c27bmu1 cpehn13 cs4dhp2 cs7du7t"
+            ><div
+              class="w-box c1nk90pb che3jd7 c1w5h4gn co6lsyh c1bj05rc ch1cxiy c11efedb c1x0ieji c127kdo1"
+            >
+              <div class="w-html-embed">
+                <svg
+                  width="100%"
+                  height="100%"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M15.5 6C9.69875 6 5 10.5882 5 16.2529C5 20.7899 8.00562 24.6219 12.1794 25.9804C12.7044 26.0701 12.9012 25.7625 12.9012 25.4934C12.9012 25.2499 12.8881 24.4425 12.8881 23.5838C10.25 24.058 9.5675 22.9558 9.3575 22.3791C9.23938 22.0843 8.7275 21.1743 8.28125 20.9308C7.91375 20.7386 7.38875 20.2644 8.26813 20.2516C9.095 20.2388 9.68563 20.9949 9.8825 21.3025C10.8275 22.8533 12.3369 22.4175 12.9406 22.1484C13.0325 21.4819 13.3081 21.0334 13.61 20.777C11.2737 20.5207 8.8325 19.6364 8.8325 15.7147C8.8325 14.5997 9.23938 13.6769 9.90875 12.9592C9.80375 12.7029 9.43625 11.6519 10.0138 10.2422C10.0138 10.2422 10.8931 9.97301 12.9012 11.2931C13.7413 11.0624 14.6338 10.947 15.5263 10.947C16.4188 10.947 17.3113 11.0624 18.1513 11.2931C20.1594 9.9602 21.0387 10.2422 21.0387 10.2422C21.6163 11.6519 21.2488 12.7029 21.1438 12.9592C21.8131 13.6769 22.22 14.5868 22.22 15.7147C22.22 19.6492 19.7656 20.5207 17.4294 20.777C17.81 21.0975 18.1381 21.7126 18.1381 22.6738C18.1381 24.0452 18.125 25.1474 18.125 25.4934C18.125 25.7625 18.3219 26.0829 18.8469 25.9804C20.9314 25.2935 22.7428 23.9854 24.026 22.2403C25.3092 20.4953 25.9996 18.4012 26 16.2529C26 10.5882 21.3013 6 15.5 6Z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+              </div></div
+          ></a>
+        </div>
+      </div>
+      <div style="display: contents">
+        <div style="display: contents">
+          <div class="w-html-embed">
+            <style>
+              /* So we don't need to add a token to every paragraph to remove margin. */
+              p {
+                margin: 0;
+              }
+
+              * {
+                /* Make links scroll to their sections smoothly. */
+                scroll-behavior: smooth;
+              }
+
+              /* Nav Trigger show active when submenu is open. */
+              nav button[data-state="open"] {
+                --navigation-menu-trigger-icon-transform: 180deg;
+                color: var(--foreground-muted);
+              }
+            </style>
+          </div>
+          <header
+            class="w-box c9ym0ht cnkzzro c1ytdcb c1ld5qzg c5qlxwb cusrxl6 c18sdt9r cck6uzs ch4e7df cjlu778 cv7ascs c1a8y8t4 c1jk0gvo c1pasm24"
+          >
+            <div style="display: contents">
+              <div style="display: contents">
+                <a
+                  aria-label="Home"
+                  class="w-link c1z4wil c1kaols7 corflgn czz9uik c17a9n8r c1jnjhm8 ce2rdc6 c10kcbz9 cwjsmmv c1q66ssy c1g92ibl c1vhknwd c1r6fq11 cav5p01 ct23i2i ce1fn2e caf16cd c1wgy1la clfgpzr c1blz2mu cuxt05h c1jzcjcx c10yyzu5 c6wijbx cfdj4kt c3rb8d cs4dhp2 cs7du7t"
+                  href="#"
+                  ><img
+                    alt=""
+                    width="67"
+                    height="67"
+                    src="/assets/FairTech_raMC7uHiQEOXX9JDI2FdR.png"
+                    class="w-image cfhwoz3 cbgxh3d c1sebl0 c19i8p8w"
+                    sizes="100vw"
+                    srcset="
+                      /assets/FairTech_raMC7uHiQEOXX9JDI2FdR.png  16w,
+                      /assets/FairTech_raMC7uHiQEOXX9JDI2FdR.png  32w,
+                      /assets/FairTech_raMC7uHiQEOXX9JDI2FdR.png  48w,
+                      /assets/FairTech_raMC7uHiQEOXX9JDI2FdR.png  64w,
+                      /assets/FairTech_raMC7uHiQEOXX9JDI2FdR.png  96w,
+                      /assets/FairTech_raMC7uHiQEOXX9JDI2FdR.png 128w,
+                      /assets/FairTech_raMC7uHiQEOXX9JDI2FdR.png 256w
+                    "
+                    decoding="async"
+                    loading="eager"
+                /></a>
+              </div>
+            </div>
+            <nav
+              aria-label="main"
+              class="w-box c5qlxwb c18rktfk c11tgerk clqr0ad c1hacr2f c1jk0gvo c1ed20qw c1i8wh09 c1fghrn cyvf0gd"
+            >
+              <div style="display: contents">
+                <div style="display: contents">
+                  <ul
+                    class="w-list c56ho7s cuu47n0 cujelru c5qlxwb c1iezziw c6doae3 c1i8wh09 c1jk0gvo c1ed20qw"
+                  >
+                    <li class="w-list-item">
+                      <a
+                        href="/#projects"
+                        class="w-link coxd2u7 coihofk corflgn czz9uik c17a9n8r c1jnjhm8 ce2rdc6 c15sv5nh cwjsmmv c1q66ssy c1g92ibl c1vhknwd c1r6fq11 cav5p01 ct23i2i ce1fn2e caf16cd c37kbwl cccjlxt c1js6n7q c18rktfk c1lb0b05 c1d1s2py c1dow46o clfgpzr c1blz2mu cuxt05h c1jzcjcx c10yyzu5 c6wijbx cfdj4kt c3rb8d cs4dhp2 cs7du7t c1ae8h7b"
+                        ><div
+                          class="w-html-embed coihofk c1mts4hq c10r9lea c18rktfk c1lb0b05 cuag7mm"
+                        >
+                          <svg
+                            width="100%"
+                            height="100%"
+                            viewBox="0 0 17 23"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M14.072 8.52L13.176 15.32H15.544V17.88H12.824L12.168 23H9.16L9.832 17.88H5.784L5.112 23H2.104L2.776 17.88H0.488V15.32H3.112L4.04 8.52H1.672V5.944H4.376L5.032 0.919998H8.056L7.352 5.944H11.416L12.088 0.919998H15.096L14.408 5.944H16.728V8.52H14.072ZM6.12 15.32H10.168L11.08 8.52H7.016L6.12 15.32Z"
+                              fill="currentColor"
+                            ></path>
+                          </svg>
+                        </div>
+                        <span class="w-text">Projects</span></a
+                      >
+                    </li>
+                    <li class="w-list-item">
+                      <a
+                        href="/#aboutme"
+                        class="w-link coxd2u7 coihofk corflgn czz9uik c17a9n8r c1jnjhm8 ce2rdc6 c15sv5nh cwjsmmv c1q66ssy c1g92ibl c1vhknwd c1r6fq11 cav5p01 ct23i2i ce1fn2e caf16cd c37kbwl cccjlxt c1js6n7q c18rktfk c1lb0b05 c1d1s2py c1dow46o clfgpzr c1blz2mu cuxt05h c1jzcjcx c10yyzu5 c6wijbx cfdj4kt c3rb8d cs4dhp2 cs7du7t c1ae8h7b"
+                        ><div
+                          class="w-html-embed coihofk c1mts4hq c10r9lea c18rktfk c1lb0b05 cuag7mm"
+                        >
+                          <svg
+                            width="100%"
+                            height="100%"
+                            viewBox="0 0 17 23"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M14.072 8.52L13.176 15.32H15.544V17.88H12.824L12.168 23H9.16L9.832 17.88H5.784L5.112 23H2.104L2.776 17.88H0.488V15.32H3.112L4.04 8.52H1.672V5.944H4.376L5.032 0.919998H8.056L7.352 5.944H11.416L12.088 0.919998H15.096L14.408 5.944H16.728V8.52H14.072ZM6.12 15.32H10.168L11.08 8.52H7.016L6.12 15.32Z"
+                              fill="currentColor"
+                            ></path>
+                          </svg>
+                        </div>
+                        <span class="w-text">About-me</span></a
+                      >
+                    </li>
+                    <li class="w-list-item">
+                      <a
+                        href="/#contact"
+                        class="w-link coxd2u7 coihofk corflgn czz9uik c17a9n8r c1jnjhm8 ce2rdc6 c15sv5nh cwjsmmv c1q66ssy c1g92ibl c1vhknwd c1r6fq11 cav5p01 ct23i2i ce1fn2e caf16cd c37kbwl cccjlxt c1js6n7q c18rktfk c1lb0b05 c1d1s2py c1dow46o clfgpzr c1blz2mu cuxt05h c1jzcjcx c10yyzu5 c6wijbx cfdj4kt c3rb8d cs4dhp2 cs7du7t c1ae8h7b"
+                        ><div
+                          class="w-html-embed coihofk c1mts4hq c10r9lea c18rktfk c1lb0b05 cuag7mm"
+                        >
+                          <svg
+                            width="100%"
+                            height="100%"
+                            viewBox="0 0 17 23"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M14.072 8.52L13.176 15.32H15.544V17.88H12.824L12.168 23H9.16L9.832 17.88H5.784L5.112 23H2.104L2.776 17.88H0.488V15.32H3.112L4.04 8.52H1.672V5.944H4.376L5.032 0.919998H8.056L7.352 5.944H11.416L12.088 0.919998H15.096L14.408 5.944H16.728V8.52H14.072ZM6.12 15.32H10.168L11.08 8.52H7.016L6.12 15.32Z"
+                              fill="currentColor"
+                            ></path>
+                          </svg>
+                        </div>
+                        <span class="w-text">Contact</span></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+            <div class="w-box c168zscu cy57n5p">
+              <button
+                type="button"
+                aria-label="Open mobile menu"
+                class="w-button coxd2u7 c1d1s2py cg7zqae chmbpbm cvfgsu5 cca15wa cwjsmmv coihofk c18rktfk c1lb0b05 c1tg4ser c108ig08 c143mjqv c71wres c1vns2er c1jrnlve c6dwg1b c16iorcu ccubb4i c4qo8cj clfgpzr c1blz2mu cs4dhp2 cs7du7t c4v99ao c60wk95 c1rc5g5w clepgrl c1d9qnjn c1jko9rz c1pk240l c1i1rh3u cpmb54x c11p91ud"
+                aria-haspopup="dialog"
+                aria-expanded="false"
+                aria-controls="radix-:Rea:"
+                data-state="closed"
+              >
+                <div class="w-html-embed">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 22 22"
+                    fill="currentColor"
+                    width="100%"
+                    height="100%"
+                    style="display: block"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M2 5.998a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1-.75-.75Zm0 5.5a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1-.75-.75Zm0 5.5a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1-.75-.75Z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+              </button>
+            </div>
+          </header>
+        </div>
+      </div>
+      <main class="w-box">
+        <section class="w-box ccimwqw cx8cst7">
+          <div
+            class="w-box c9ym0ht cnkzzro c1ytdcb c1ld5qzg c5qlxwb c1ebm6y8 c18sdt9r c84wvpq ch4e7df cjlu778 c18o2ure cokip0u"
+          >
+            <div
+              class="w-box cbdaw2e c9nvcjk cgdwuqg cifhm77 c1n7mlhy c18rktfk cw1bgev c1i8wh09 c1c5np3u"
+            >
+              <div
+                class="w-box c5qlxwb c1ebm6y8 c9nvcjk cgdwuqg c7tqq0f c84wvpq"
+              >
+                <h1
+                  data-ani="slide-down"
+                  class="w-heading c71wres c1wzad98 c1hqbfuk c1pq52th c1hx1g5x c1te2g72"
+                >
+                  FairTech
+                </h1>
+                <div
+                  class="w-box c5qlxwb c1ebm6y8 c9nvcjk cgdwuqg c7tqq0f c84wvpq"
+                >
+                  <p data-ani="zoom" class="w-paragraph">
+                    Crafting unique experiences where technologies meet
+                    creativity
+                  </p>
+                  <a
+                    data-ani="slide-up"
+                    href="mailto:Nick@FairTech.space"
+                    class="w-link coxd2u7 c1d1s2py cg7zqae chmbpbm cvfgsu5 cca15wa cwjsmmv coihofk c18rktfk c1lb0b05 c1tg4ser c108ig08 c143mjqv c71wres c1vns2er c1jrnlve c6dwg1b c16iorcu ccubb4i c4qo8cj clfgpzr c1blz2mu cs4dhp2 cs7du7t c4v99ao c60wk95"
+                    >Contact Me!</a
+                  >
+                </div>
+              </div>
+              <div
+                class="w-box c1lysizw cihg3hi cj060r9 cbk7qto c1nov326 c18rktfk c1lb0b05 c1ebm6y8 c5qlxwb c1tsdtxe c1f0gaqn c72ccnq cczxxpv cv3knp1"
+              >
+                <img
+                  alt=""
+                  width="1067"
+                  height="1067"
+                  src="/assets/FairTech_raMC7uHiQEOXX9JDI2FdR.png"
+                  data-ani="slide-down"
+                  class="w-image c1lysizw cakwgzf c1ovetqx c1pa86yp"
+                  sizes="100vw"
+                  srcset="
+                    /assets/FairTech_raMC7uHiQEOXX9JDI2FdR.png   16w,
+                    /assets/FairTech_raMC7uHiQEOXX9JDI2FdR.png   32w,
+                    /assets/FairTech_raMC7uHiQEOXX9JDI2FdR.png   48w,
+                    /assets/FairTech_raMC7uHiQEOXX9JDI2FdR.png   64w,
+                    /assets/FairTech_raMC7uHiQEOXX9JDI2FdR.png   96w,
+                    /assets/FairTech_raMC7uHiQEOXX9JDI2FdR.png  128w,
+                    /assets/FairTech_raMC7uHiQEOXX9JDI2FdR.png  256w,
+                    /assets/FairTech_raMC7uHiQEOXX9JDI2FdR.png  384w,
+                    /assets/FairTech_raMC7uHiQEOXX9JDI2FdR.png  640w,
+                    /assets/FairTech_raMC7uHiQEOXX9JDI2FdR.png  750w,
+                    /assets/FairTech_raMC7uHiQEOXX9JDI2FdR.png  828w,
+                    /assets/FairTech_raMC7uHiQEOXX9JDI2FdR.png 1080w,
+                    /assets/FairTech_raMC7uHiQEOXX9JDI2FdR.png 1200w,
+                    /assets/FairTech_raMC7uHiQEOXX9JDI2FdR.png 1920w,
+                    /assets/FairTech_raMC7uHiQEOXX9JDI2FdR.png 2048w,
+                    /assets/FairTech_raMC7uHiQEOXX9JDI2FdR.png 3840w
+                  "
+                  decoding="async"
+                  loading="lazy"
+                /><img
+                  alt='""'
+                  width="84"
+                  height="84"
+                  src="/assets/Dots_9Z8gpsBa25XO2AIvUoaPh.svg"
+                  data-ani="zoom"
+                  class="w-image c10num8x cipax5p c1sndxad ctsj23v c2180wu cc569pi cha8gdn c1veuciq crv8rvp csh68kb cakwgzf"
+                  sizes="100vw"
+                  srcset="
+                    /assets/Dots_9Z8gpsBa25XO2AIvUoaPh.svg  16w,
+                    /assets/Dots_9Z8gpsBa25XO2AIvUoaPh.svg  32w,
+                    /assets/Dots_9Z8gpsBa25XO2AIvUoaPh.svg  48w,
+                    /assets/Dots_9Z8gpsBa25XO2AIvUoaPh.svg  64w,
+                    /assets/Dots_9Z8gpsBa25XO2AIvUoaPh.svg  96w,
+                    /assets/Dots_9Z8gpsBa25XO2AIvUoaPh.svg 128w,
+                    /assets/Dots_9Z8gpsBa25XO2AIvUoaPh.svg 256w
+                  "
+                  decoding="async"
+                  loading="lazy"
+                /><img
+                  alt='""'
+                  width="156"
+                  height="156"
+                  src="/assets/squares_XMImQdbBVQvB4ZOfXvZxp.svg"
+                  data-ani="zoom"
+                  class="w-image c1dpmxl6 ctie69 c1sndxad ctsj23v c2180wu cc569pi cha8gdn cn71n9k cjgy0ud c1veuciq"
+                  sizes="100vw"
+                  srcset="
+                    /assets/squares_XMImQdbBVQvB4ZOfXvZxp.svg  16w,
+                    /assets/squares_XMImQdbBVQvB4ZOfXvZxp.svg  32w,
+                    /assets/squares_XMImQdbBVQvB4ZOfXvZxp.svg  48w,
+                    /assets/squares_XMImQdbBVQvB4ZOfXvZxp.svg  64w,
+                    /assets/squares_XMImQdbBVQvB4ZOfXvZxp.svg  96w,
+                    /assets/squares_XMImQdbBVQvB4ZOfXvZxp.svg 128w,
+                    /assets/squares_XMImQdbBVQvB4ZOfXvZxp.svg 256w,
+                    /assets/squares_XMImQdbBVQvB4ZOfXvZxp.svg 384w
+                  "
+                  decoding="async"
+                  loading="lazy"
+                />
+                <div
+                  data-ani="slide-up"
+                  class="w-box c5qlxwb cdl2bus cj34jm2 c18rktfk c84wvpq cer7iaj c1lysizw c1wli87h c18uxv83 cklle4q ci7wyuw"
+                >
+                  <div class="w-box c9j5d3a c138v358 c1i8z9bi"></div>
+                  <div class="w-text">Currently working on SplitStream</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="w-box ccimwqw cx8cst7">
+          <div
+            class="w-box c9ym0ht cnkzzro c1ytdcb c1ld5qzg c5qlxwb c1ebm6y8 c18sdt9r c84wvpq ch4e7df cjlu778 c18o2ure cokip0u"
+          >
+            <div
+              class="w-box c5qlxwb c1ebm6y8 c132nmvh c143mjqv cnkzzro c9ym0ht"
+            >
+              <div class="w-box c1lysizw cklle4q ctp8r8l">
+                <p
+                  class="w-paragraph crenmre c97q9s0 c1wzad98 c1hqbfuk coxd2u7"
+                >
+                  With great power comes great electricity bill
+                </p>
+                <div
+                  class="w-box coihofk c12efou5 c1veuciq cn71n9k c1eyww0w cgngsgl"
+                >
+                  <div style="display: contents">
+                    <div style="display: contents">
+                      <div class="w-html-embed">
+                        <svg
+                          width="100%"
+                          height="100%"
+                          viewBox="0 0 42 29"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <rect
+                            width="41.472"
+                            height="28.704"
+                            fill="var(--background-primary)"
+                          ></rect>
+                          <path
+                            d="M18.56 19.616C18.56 21.0453 18.0373 22.2507 16.992 23.232C15.968 24.2133 14.72 24.704 13.248 24.704C11.7333 24.704 10.4747 24.2133 9.472 23.232C8.49067 22.2507 8 21.0453 8 19.616C8 18.9333 8.096 18.208 8.288 17.44C8.48 16.672 8.864 15.68 9.44 14.464L14.4 4H19.2L16.544 15.584C17.1413 16.0107 17.6213 16.576 17.984 17.28C18.368 17.9627 18.56 18.7413 18.56 19.616ZM32.8 19.616C32.8 21.0453 32.2773 22.2507 31.232 23.232C30.1867 24.2133 28.9387 24.704 27.488 24.704C26.016 24.704 24.768 24.2133 23.744 23.232C22.7413 22.2507 22.24 21.0453 22.24 19.616C22.24 18.9333 22.336 18.208 22.528 17.44C22.72 16.672 23.1147 15.68 23.712 14.464L28.704 4H33.472L30.784 15.584C31.4027 16.0107 31.8933 16.576 32.256 17.28C32.6187 17.9627 32.8 18.7413 32.8 19.616Z"
+                            fill="var(--foreground-primary)"
+                          ></path>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="w-box coihofk c12efou5 c1veuciq cequyxz c1biscth crqv98z c1otox4h csh68kb"
+                >
+                  <div style="display: contents">
+                    <div style="display: contents">
+                      <div class="w-html-embed">
+                        <svg
+                          width="100%"
+                          height="100%"
+                          viewBox="0 0 42 29"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <rect
+                            width="41.472"
+                            height="28.704"
+                            fill="var(--background-primary)"
+                          ></rect>
+                          <path
+                            d="M18.56 19.616C18.56 21.0453 18.0373 22.2507 16.992 23.232C15.968 24.2133 14.72 24.704 13.248 24.704C11.7333 24.704 10.4747 24.2133 9.472 23.232C8.49067 22.2507 8 21.0453 8 19.616C8 18.9333 8.096 18.208 8.288 17.44C8.48 16.672 8.864 15.68 9.44 14.464L14.4 4H19.2L16.544 15.584C17.1413 16.0107 17.6213 16.576 17.984 17.28C18.368 17.9627 18.56 18.7413 18.56 19.616ZM32.8 19.616C32.8 21.0453 32.2773 22.2507 31.232 23.232C30.1867 24.2133 28.9387 24.704 27.488 24.704C26.016 24.704 24.768 24.2133 23.744 23.232C22.7413 22.2507 22.24 21.0453 22.24 19.616C22.24 18.9333 22.336 18.208 22.528 17.44C22.72 16.672 23.1147 15.68 23.712 14.464L28.704 4H33.472L30.784 15.584C31.4027 16.0107 31.8933 16.576 32.256 17.28C32.6187 17.9627 32.8 18.7413 32.8 19.616Z"
+                            fill="var(--foreground-primary)"
+                          ></path>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="w-box c1dw7gkb">
+                <div
+                  class="w-text c1bhzrb4 c97q9s0 c1wzad98 c1hqbfuk coxd2u7 c331br6 cqv6dap ci7188j c3a7o2y cz6brsn cqkefnh"
+                >
+                  - Dr. Who
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="projects" class="w-box ccimwqw cx8cst7">
+          <div
+            class="w-box c9ym0ht cnkzzro c1ytdcb c1ld5qzg c5qlxwb c1ebm6y8 c18sdt9r c84wvpq ch4e7df cjlu778 c18o2ure cokip0u"
+          >
+            <div
+              class="w-box c5qlxwb cusrxl6 cgdwuqg c9nvcjk c18rktfk c84wvpq c1ytdcb cqz2d0s"
+            >
+              <h2
+                class="w-heading cizb3yu c97q9s0 c1wzad98 c1hqbfuk coxd2u7 c12hibr9 c143mjqv c5qlxwb c18rktfk c84wvpq c1dow46o c1wli87h c1lysizw cakwgzf c1609c0f c1hacr2f c1te2g72"
+              >
+                <div
+                  class="w-html-embed cuag7mm coihofk c10135pl c1dxatha c1wgy1la"
+                >
+                  <svg
+                    width="100%"
+                    height="100%"
+                    viewBox="0 0 17 23"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M14.072 8.52L13.176 15.32H15.544V17.88H12.824L12.168 23H9.16L9.832 17.88H5.784L5.112 23H2.104L2.776 17.88H0.488V15.32H3.112L4.04 8.52H1.672V5.944H4.376L5.032 0.919998H8.056L7.352 5.944H11.416L12.088 0.919998H15.096L14.408 5.944H16.728V8.52H14.072ZM6.12 15.32H10.168L11.08 8.52H7.016L6.12 15.32Z"
+                      fill="currentColor"
+                    ></path>
+                  </svg>
+                </div>
+                <span class="w-text">Projects</span>
+              </h2>
+              <div style="display: contents">
+                <div style="display: contents">
+                  <hr
+                    data-ani="slide-right"
+                    class="w-separator c1yi5qyu c1ytdcb c1wzad98 c1hqbfuk"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              data-ani-children="true"
+              data-ani="slide-up"
+              class="w-box cbdaw2e c9nvcjk cgdwuqg ca9qfnp c1n7mlhy c14xocq1 cw1bgev c1i8wh09"
+            >
+              <div class="w-box c5qlxwb c1ebm6y8 c84wvpq c1q07xnt co7mk2h">
+                <div class="w-box">
+                  <img
+                    alt=""
+                    width="1024"
+                    height="576"
+                    src="/assets/splitstream_banner_McY3kfEqLWav-lZw_6eYG.png"
+                    class="w-image cr59cjr csc57nk cdju5ac ckrfdfr"
+                    sizes="100vw"
+                    srcset="
+                      /assets/splitstream_banner_McY3kfEqLWav-lZw_6eYG.png   16w,
+                      /assets/splitstream_banner_McY3kfEqLWav-lZw_6eYG.png   32w,
+                      /assets/splitstream_banner_McY3kfEqLWav-lZw_6eYG.png   48w,
+                      /assets/splitstream_banner_McY3kfEqLWav-lZw_6eYG.png   64w,
+                      /assets/splitstream_banner_McY3kfEqLWav-lZw_6eYG.png   96w,
+                      /assets/splitstream_banner_McY3kfEqLWav-lZw_6eYG.png  128w,
+                      /assets/splitstream_banner_McY3kfEqLWav-lZw_6eYG.png  256w,
+                      /assets/splitstream_banner_McY3kfEqLWav-lZw_6eYG.png  384w,
+                      /assets/splitstream_banner_McY3kfEqLWav-lZw_6eYG.png  640w,
+                      /assets/splitstream_banner_McY3kfEqLWav-lZw_6eYG.png  750w,
+                      /assets/splitstream_banner_McY3kfEqLWav-lZw_6eYG.png  828w,
+                      /assets/splitstream_banner_McY3kfEqLWav-lZw_6eYG.png 1080w,
+                      /assets/splitstream_banner_McY3kfEqLWav-lZw_6eYG.png 1200w,
+                      /assets/splitstream_banner_McY3kfEqLWav-lZw_6eYG.png 1920w,
+                      /assets/splitstream_banner_McY3kfEqLWav-lZw_6eYG.png 2048w
+                    "
+                    decoding="async"
+                    loading="lazy"
+                  />
+                </div>
+                <div
+                  class="w-box c5qlxwb cusrxl6 c18rktfk c1lb0b05 cdl2bus cj34jm2 cg7zqae chmbpbm cml79pu c1ny9riq cft0hnr c143mjqv c1609c0f cpww0tk c14onoel c1ydsexc cmjukhx c3a7o2y c1titcq8"
+                >
+                  <div
+                    class="w-text c5qlxwb clqr0ad c1hacr2f c14onoel c1lb0b05"
+                  >
+                    Web App Project
+                  </div>
+                </div>
+                <div
+                  class="w-box c5qlxwb c1ebm6y8 c1iezziw c6doae3 c7tqq0f c84wvpq ctp8r8l"
+                >
+                  <h3
+                    class="w-heading crenmre c97q9s0 c1wzad98 c1hqbfuk coxd2u7"
+                  >
+                    SplitStream
+                  </h3>
+                  <p class="w-paragraph">
+                    A Controller Sharing Activity Built for Discord Activities
+                  </p>
+                  <a
+                    href="https://github.com/Fair-Tech/SplitStream"
+                    class="w-link coxd2u7 c1d1s2py cg7zqae chmbpbm cvfgsu5 cca15wa cwjsmmv coihofk c18rktfk c1lb0b05 c1tg4ser c108ig08 c143mjqv c71wres c1vns2er c1jrnlve c6dwg1b c16iorcu ccubb4i c4qo8cj clfgpzr c1blz2mu cs4dhp2 cs7du7t c4v99ao c60wk95"
+                    >View Project</a
+                  >
+                </div>
+              </div>
+              <div class="w-box c5qlxwb c1ebm6y8 c84wvpq c1q07xnt co7mk2h">
+                <div class="w-box">
+                  <img
+                    alt=""
+                    width="1920"
+                    height="1080"
+                    src="/assets/FairTech_CoverScreen_iWd0Z5UEngzd-bIV1kx1u.jpg"
+                    class="w-image cr59cjr csc57nk cdju5ac ckrfdfr"
+                    sizes="100vw"
+                    srcset="
+                      /assets/FairTech_CoverScreen_iWd0Z5UEngzd-bIV1kx1u.jpg   16w,
+                      /assets/FairTech_CoverScreen_iWd0Z5UEngzd-bIV1kx1u.jpg   32w,
+                      /assets/FairTech_CoverScreen_iWd0Z5UEngzd-bIV1kx1u.jpg   48w,
+                      /assets/FairTech_CoverScreen_iWd0Z5UEngzd-bIV1kx1u.jpg   64w,
+                      /assets/FairTech_CoverScreen_iWd0Z5UEngzd-bIV1kx1u.jpg   96w,
+                      /assets/FairTech_CoverScreen_iWd0Z5UEngzd-bIV1kx1u.jpg  128w,
+                      /assets/FairTech_CoverScreen_iWd0Z5UEngzd-bIV1kx1u.jpg  256w,
+                      /assets/FairTech_CoverScreen_iWd0Z5UEngzd-bIV1kx1u.jpg  384w,
+                      /assets/FairTech_CoverScreen_iWd0Z5UEngzd-bIV1kx1u.jpg  640w,
+                      /assets/FairTech_CoverScreen_iWd0Z5UEngzd-bIV1kx1u.jpg  750w,
+                      /assets/FairTech_CoverScreen_iWd0Z5UEngzd-bIV1kx1u.jpg  828w,
+                      /assets/FairTech_CoverScreen_iWd0Z5UEngzd-bIV1kx1u.jpg 1080w,
+                      /assets/FairTech_CoverScreen_iWd0Z5UEngzd-bIV1kx1u.jpg 1200w,
+                      /assets/FairTech_CoverScreen_iWd0Z5UEngzd-bIV1kx1u.jpg 1920w,
+                      /assets/FairTech_CoverScreen_iWd0Z5UEngzd-bIV1kx1u.jpg 2048w,
+                      /assets/FairTech_CoverScreen_iWd0Z5UEngzd-bIV1kx1u.jpg 3840w
+                    "
+                    decoding="async"
+                    loading="lazy"
+                  />
+                </div>
+                <div
+                  class="w-box c5qlxwb cusrxl6 c18rktfk c1lb0b05 cdl2bus cj34jm2 cg7zqae chmbpbm cml79pu c1ny9riq cft0hnr c1ydsexc cmjukhx c3a7o2y c1titcq8"
+                >
+                  <div class="w-text">Windows App Project</div>
+                </div>
+                <div
+                  class="w-box c5qlxwb c1ebm6y8 c1iezziw c6doae3 c18rktfk c1lb0b05 ctp8r8l"
+                >
+                  <h3
+                    class="w-heading crenmre c97q9s0 c1wzad98 c1hqbfuk coxd2u7 c5qlxwb c18rktfk c1lb0b05 c1609c0f c1hacr2f cbpeoy8 cki9ocu cusrxl6"
+                  >
+                    FairTech MultiTool
+                  </h3>
+                  <p class="w-paragraph c15f6g5a c1lb0b05">
+                    A Multi-use Tool for Windows.<br />Audio Manager,
+                    <br />Window Pinning and Transparency, <br />Display Config
+                    Manager and more!
+                  </p>
+                  <a
+                    href="https://github.com/Fair-Tech/Fair-Multi-Tool"
+                    class="w-link coxd2u7 c1d1s2py cg7zqae chmbpbm cvfgsu5 cca15wa cwjsmmv coihofk c18rktfk c1lb0b05 c1tg4ser c108ig08 c143mjqv c71wres c1vns2er c1jrnlve c6dwg1b c16iorcu ccubb4i c4qo8cj clfgpzr c1blz2mu cs4dhp2 cs7du7t c4v99ao c60wk95"
+                    >View Project</a
+                  >
+                </div>
+              </div>
+              <div class="w-box c5qlxwb c1ebm6y8 c84wvpq c1q07xnt co7mk2h">
+                <div class="w-box">
+                  <img
+                    alt=""
+                    width="640"
+                    height="360"
+                    src="/assets/projectbanner_aI1ks9mxJ0GxZ7fOAovsM.jpg"
+                    class="w-image cr59cjr csc57nk cdju5ac ckrfdfr"
+                    sizes="100vw"
+                    srcset="
+                      /assets/projectbanner_aI1ks9mxJ0GxZ7fOAovsM.jpg   16w,
+                      /assets/projectbanner_aI1ks9mxJ0GxZ7fOAovsM.jpg   32w,
+                      /assets/projectbanner_aI1ks9mxJ0GxZ7fOAovsM.jpg   48w,
+                      /assets/projectbanner_aI1ks9mxJ0GxZ7fOAovsM.jpg   64w,
+                      /assets/projectbanner_aI1ks9mxJ0GxZ7fOAovsM.jpg   96w,
+                      /assets/projectbanner_aI1ks9mxJ0GxZ7fOAovsM.jpg  128w,
+                      /assets/projectbanner_aI1ks9mxJ0GxZ7fOAovsM.jpg  256w,
+                      /assets/projectbanner_aI1ks9mxJ0GxZ7fOAovsM.jpg  384w,
+                      /assets/projectbanner_aI1ks9mxJ0GxZ7fOAovsM.jpg  640w,
+                      /assets/projectbanner_aI1ks9mxJ0GxZ7fOAovsM.jpg  750w,
+                      /assets/projectbanner_aI1ks9mxJ0GxZ7fOAovsM.jpg  828w,
+                      /assets/projectbanner_aI1ks9mxJ0GxZ7fOAovsM.jpg 1080w,
+                      /assets/projectbanner_aI1ks9mxJ0GxZ7fOAovsM.jpg 1200w,
+                      /assets/projectbanner_aI1ks9mxJ0GxZ7fOAovsM.jpg 1920w
+                    "
+                    decoding="async"
+                    loading="lazy"
+                  />
+                </div>
+                <div
+                  class="w-box c5qlxwb cusrxl6 c18rktfk c1lb0b05 cdl2bus cj34jm2 cg7zqae chmbpbm cml79pu c1ny9riq cft0hnr c1ydsexc cmjukhx c3a7o2y c1titcq8"
+                >
+                  <div class="w-text">Console Mod Project</div>
+                </div>
+                <div
+                  class="w-box c5qlxwb c1ebm6y8 c1iezziw c6doae3 c7tqq0f c84wvpq ctp8r8l"
+                >
+                  <h3
+                    class="w-heading crenmre c97q9s0 c1wzad98 c1hqbfuk coxd2u7"
+                  >
+                    FairTech AIO Switch CFW Pack
+                  </h3>
+                  <p class="w-paragraph">
+                    All-In-One Custom Firmware Package for Modded Nintendo
+                    Switches
+                  </p>
+                  <a
+                    class="w-link coxd2u7 c1d1s2py cg7zqae chmbpbm cvfgsu5 cca15wa cwjsmmv coihofk c18rktfk c1lb0b05 c1tg4ser c108ig08 c143mjqv c71wres c1vns2er c1jrnlve c6dwg1b c16iorcu ccubb4i c4qo8cj clfgpzr c1blz2mu cs4dhp2 cs7du7t c4v99ao c60wk95"
+                    href="#"
+                    >View Project</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="w-box ccimwqw cx8cst7">
+          <div
+            class="w-box c9ym0ht cnkzzro c1ytdcb c1ld5qzg c5qlxwb c1ebm6y8 c18sdt9r c84wvpq ch4e7df cjlu778 c18o2ure cokip0u"
+          >
+            <div
+              class="w-box c5qlxwb cusrxl6 cgdwuqg c9nvcjk c18rktfk c84wvpq c1ytdcb cqz2d0s"
+            >
+              <h2
+                class="w-heading cizb3yu c97q9s0 c1wzad98 c1hqbfuk coxd2u7 c12hibr9 c143mjqv c5qlxwb c18rktfk c84wvpq c1dow46o c1wli87h c1lysizw cakwgzf c1609c0f c1hacr2f c1te2g72"
+              >
+                <div
+                  class="w-html-embed cuag7mm coihofk c10135pl c1dxatha c1wgy1la"
+                >
+                  <svg
+                    width="100%"
+                    height="100%"
+                    viewBox="0 0 17 23"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M14.072 8.52L13.176 15.32H15.544V17.88H12.824L12.168 23H9.16L9.832 17.88H5.784L5.112 23H2.104L2.776 17.88H0.488V15.32H3.112L4.04 8.52H1.672V5.944H4.376L5.032 0.919998H8.056L7.352 5.944H11.416L12.088 0.919998H15.096L14.408 5.944H16.728V8.52H14.072ZM6.12 15.32H10.168L11.08 8.52H7.016L6.12 15.32Z"
+                      fill="currentColor"
+                    ></path>
+                  </svg>
+                </div>
+                <span class="w-text">Skills</span>
+              </h2>
+              <div style="display: contents">
+                <div style="display: contents">
+                  <hr
+                    data-ani="slide-right"
+                    class="w-separator c1yi5qyu c1ytdcb c1wzad98 c1hqbfuk"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="w-box cbdaw2e c9nvcjk cgdwuqg c1m7oeac c1n7mlhy c14xocq1 cw1bgev c1i8wh09 c1w07k0c"
+            >
+              <div class="w-box c2yw1lo">
+                <img
+                  alt='""'
+                  width="349"
+                  height="283"
+                  src="/assets/Group_36_hJOGpsqIN9HAO02pp1p0C.svg"
+                  class="w-image"
+                  sizes="100vw"
+                  srcset="
+                    /assets/Group_36_hJOGpsqIN9HAO02pp1p0C.svg  16w,
+                    /assets/Group_36_hJOGpsqIN9HAO02pp1p0C.svg  32w,
+                    /assets/Group_36_hJOGpsqIN9HAO02pp1p0C.svg  48w,
+                    /assets/Group_36_hJOGpsqIN9HAO02pp1p0C.svg  64w,
+                    /assets/Group_36_hJOGpsqIN9HAO02pp1p0C.svg  96w,
+                    /assets/Group_36_hJOGpsqIN9HAO02pp1p0C.svg 128w,
+                    /assets/Group_36_hJOGpsqIN9HAO02pp1p0C.svg 256w,
+                    /assets/Group_36_hJOGpsqIN9HAO02pp1p0C.svg 384w,
+                    /assets/Group_36_hJOGpsqIN9HAO02pp1p0C.svg 640w,
+                    /assets/Group_36_hJOGpsqIN9HAO02pp1p0C.svg 750w
+                  "
+                  decoding="async"
+                  loading="lazy"
+                />
+              </div>
+              <div
+                data-ani-children="true"
+                data-ani="slide-up"
+                class="w-box cbdaw2e c9nvcjk cgdwuqg ca9qfnp c1n7mlhy c14xocq1 cw1bgev c1i8wh09"
+              >
+                <div class="w-box c5qlxwb c1ebm6y8 c84wvpq c1q07xnt co7mk2h">
+                  <div
+                    class="w-box c5qlxwb cusrxl6 c7tqq0f c84wvpq cdl2bus cj34jm2 cg7zqae chmbpbm cml79pu c1ny9riq cft0hnr c1ydsexc cmjukhx c3a7o2y c1titcq8"
+                  >
+                    <h3
+                      class="w-heading crenmre c97q9s0 c1wzad98 c1hqbfuk coxd2u7"
+                    >
+                      Tools
+                    </h3>
+                  </div>
+                  <div
+                    class="w-box c5qlxwb cusrxl6 c1iezziw c6doae3 c7tqq0f c84wvpq cft0hnr ctp8r8l"
+                  >
+                    <div class="w-text">Adobe Creative Suite</div>
+                    <div class="w-text">Blender</div>
+                    <div class="w-text">Unreal Engine</div>
+                    <div class="w-text">VSCode</div>
+                    <div class="w-text">Cursor</div>
+                    <div class="w-text">Git</div>
+                  </div>
+                </div>
+                <div class="w-box c5qlxwb c1ebm6y8 c84wvpq c1q07xnt co7mk2h">
+                  <div
+                    class="w-box c5qlxwb cusrxl6 c7tqq0f c84wvpq cdl2bus cj34jm2 cg7zqae chmbpbm cml79pu c1ny9riq cft0hnr c1ydsexc cmjukhx c3a7o2y c1titcq8"
+                  >
+                    <h3
+                      class="w-heading crenmre c97q9s0 c1wzad98 c1hqbfuk coxd2u7"
+                    >
+                      Languages
+                    </h3>
+                  </div>
+                  <div
+                    class="w-box c5qlxwb cusrxl6 c1iezziw c6doae3 c7tqq0f c84wvpq cft0hnr ctp8r8l"
+                  >
+                    <div class="w-text">TypeScript</div>
+                    <div class="w-text">JavaScript</div>
+                    <div class="w-text">CSS</div>
+                    <div class="w-text">Python</div>
+                    <div class="w-text">AutoHotKey</div>
+                  </div>
+                </div>
+                <div class="w-box c5qlxwb c1ebm6y8 c84wvpq c1q07xnt co7mk2h">
+                  <div
+                    class="w-box c5qlxwb cusrxl6 c7tqq0f c84wvpq cdl2bus cj34jm2 cg7zqae chmbpbm cml79pu c1ny9riq cft0hnr c1ydsexc cmjukhx c3a7o2y c1titcq8"
+                  >
+                    <h3
+                      class="w-heading crenmre c97q9s0 c1wzad98 c1hqbfuk coxd2u7"
+                    >
+                      Databases
+                    </h3>
+                  </div>
+                  <div
+                    class="w-box c5qlxwb cusrxl6 c1iezziw c6doae3 c7tqq0f c84wvpq cft0hnr ctp8r8l"
+                  >
+                    <div class="w-text">PostgreSQL</div>
+                    <div class="w-text">SQLite</div>
+                    <div class="w-text">Mongo</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section
+          id="aboutme"
+          class="w-box ccimwqw cx8cst7 c1lysizw cihg3hi cj060r9 cbk7qto c1nov326 c1f0gaqn c72ccnq cczxxpv cv3knp1"
+        >
+          <div
+            class="w-box c9ym0ht cnkzzro c1ytdcb c1ld5qzg c5qlxwb c1ebm6y8 c18sdt9r c84wvpq ch4e7df cjlu778 c18o2ure cokip0u"
+          >
+            <div
+              class="w-box c5qlxwb cusrxl6 cgdwuqg c9nvcjk c18rktfk c84wvpq c1ytdcb cqz2d0s"
+            >
+              <h2
+                class="w-heading cizb3yu c97q9s0 c1wzad98 c1hqbfuk coxd2u7 c12hibr9 c143mjqv c5qlxwb c18rktfk c84wvpq c1dow46o c1wli87h c1lysizw cakwgzf c1609c0f c1hacr2f c1te2g72"
+              >
+                <div
+                  class="w-html-embed cuag7mm coihofk c10135pl c1dxatha c1wgy1la"
+                >
+                  <svg
+                    width="100%"
+                    height="100%"
+                    viewBox="0 0 17 23"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M14.072 8.52L13.176 15.32H15.544V17.88H12.824L12.168 23H9.16L9.832 17.88H5.784L5.112 23H2.104L2.776 17.88H0.488V15.32H3.112L4.04 8.52H1.672V5.944H4.376L5.032 0.919998H8.056L7.352 5.944H11.416L12.088 0.919998H15.096L14.408 5.944H16.728V8.52H14.072ZM6.12 15.32H10.168L11.08 8.52H7.016L6.12 15.32Z"
+                      fill="currentColor"
+                    ></path>
+                  </svg>
+                </div>
+                <span class="w-text">about-me</span>
+              </h2>
+              <div style="display: contents">
+                <div style="display: contents">
+                  <hr
+                    data-ani="slide-right"
+                    class="w-separator c1yi5qyu c1ytdcb c1wzad98 c1hqbfuk"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="w-box cbdaw2e c9nvcjk cgdwuqg c151fhok c1n7mlhy c14xocq1 cw1bgev c1i8wh09"
+            >
+              <div
+                data-ani="slide-up"
+                class="w-box c5qlxwb c1ebm6y8 c9nvcjk cgdwuqg c7tqq0f c84wvpq c1d4qond"
+              >
+                <p class="w-paragraph">Hello, I’m Nick!</p>
+                <p class="w-paragraph">
+                  I’m a self-taught developer based in Orlando, Florida. I can
+                  develop responsive websites, compelling media content, game
+                  and console mods, and much more!
+                </p>
+                <p class="w-paragraph">
+                  Transforming my creativity and knowledge into new experiences
+                  has been my passion for over a decade. I&#x27;ve helped
+                  various clients establish their presence online, develop
+                  front-end and back-end applications to increase productivity
+                  and automation, and expand brand identity with bespoke
+                  graphics and design.
+                </p>
+                <a
+                  class="w-link coxd2u7 c1d1s2py cg7zqae chmbpbm cvfgsu5 cca15wa cwjsmmv coihofk c18rktfk c1lb0b05 c1tg4ser c108ig08 c143mjqv c71wres c1vns2er c1jrnlve c6dwg1b c16iorcu ccubb4i c4qo8cj clfgpzr c1blz2mu cs4dhp2 cs7du7t c4v99ao c60wk95"
+                  href="#"
+                  >Read More</a
+                >
+              </div>
+              <div class="w-box c1lysizw">
+                <img
+                  alt=""
+                  width="573"
+                  height="600"
+                  src="/assets/Nick_q_174bX9bmVE5AZq79mhg.png"
+                  class="w-image"
+                  sizes="100vw"
+                  srcset="
+                    /assets/Nick_q_174bX9bmVE5AZq79mhg.png   16w,
+                    /assets/Nick_q_174bX9bmVE5AZq79mhg.png   32w,
+                    /assets/Nick_q_174bX9bmVE5AZq79mhg.png   48w,
+                    /assets/Nick_q_174bX9bmVE5AZq79mhg.png   64w,
+                    /assets/Nick_q_174bX9bmVE5AZq79mhg.png   96w,
+                    /assets/Nick_q_174bX9bmVE5AZq79mhg.png  128w,
+                    /assets/Nick_q_174bX9bmVE5AZq79mhg.png  256w,
+                    /assets/Nick_q_174bX9bmVE5AZq79mhg.png  384w,
+                    /assets/Nick_q_174bX9bmVE5AZq79mhg.png  640w,
+                    /assets/Nick_q_174bX9bmVE5AZq79mhg.png  750w,
+                    /assets/Nick_q_174bX9bmVE5AZq79mhg.png  828w,
+                    /assets/Nick_q_174bX9bmVE5AZq79mhg.png 1080w,
+                    /assets/Nick_q_174bX9bmVE5AZq79mhg.png 1200w
+                  "
+                  decoding="async"
+                  loading="lazy"
+                /><img
+                  alt='""'
+                  width="84"
+                  height="84"
+                  src="/assets/Dots_9Z8gpsBa25XO2AIvUoaPh.svg"
+                  class="w-image c1dpmxl6 ctie69 c1sndxad ctsj23v c2180wu cc569pi cha8gdn c1veuciq cjgy0ud c1xf8fjy"
+                  sizes="100vw"
+                  srcset="
+                    /assets/Dots_9Z8gpsBa25XO2AIvUoaPh.svg  16w,
+                    /assets/Dots_9Z8gpsBa25XO2AIvUoaPh.svg  32w,
+                    /assets/Dots_9Z8gpsBa25XO2AIvUoaPh.svg  48w,
+                    /assets/Dots_9Z8gpsBa25XO2AIvUoaPh.svg  64w,
+                    /assets/Dots_9Z8gpsBa25XO2AIvUoaPh.svg  96w,
+                    /assets/Dots_9Z8gpsBa25XO2AIvUoaPh.svg 128w,
+                    /assets/Dots_9Z8gpsBa25XO2AIvUoaPh.svg 256w
+                  "
+                  decoding="async"
+                  loading="lazy"
+                /><img
+                  alt='""'
+                  width="104"
+                  height="56"
+                  src="/assets/Frame_30_5LIzNSI1Yf24TGP_ZZCnb.svg"
+                  class="w-image c10num8x cipax5p c1sndxad ctsj23v c2180wu cc569pi cha8gdn c1veuciq c6ayzb1 ca53wce"
+                  sizes="100vw"
+                  srcset="
+                    /assets/Frame_30_5LIzNSI1Yf24TGP_ZZCnb.svg  16w,
+                    /assets/Frame_30_5LIzNSI1Yf24TGP_ZZCnb.svg  32w,
+                    /assets/Frame_30_5LIzNSI1Yf24TGP_ZZCnb.svg  48w,
+                    /assets/Frame_30_5LIzNSI1Yf24TGP_ZZCnb.svg  64w,
+                    /assets/Frame_30_5LIzNSI1Yf24TGP_ZZCnb.svg  96w,
+                    /assets/Frame_30_5LIzNSI1Yf24TGP_ZZCnb.svg 128w,
+                    /assets/Frame_30_5LIzNSI1Yf24TGP_ZZCnb.svg 256w
+                  "
+                  decoding="async"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="contact" class="w-box ccimwqw cx8cst7">
+          <div
+            class="w-box c9ym0ht cnkzzro c1ytdcb c1ld5qzg c5qlxwb c1ebm6y8 c18sdt9r c84wvpq ch4e7df cjlu778 c18o2ure cokip0u"
+          >
+            <div
+              class="w-box c5qlxwb cusrxl6 cgdwuqg c9nvcjk c18rktfk c84wvpq c1ytdcb cqz2d0s"
+            >
+              <h2
+                class="w-heading cizb3yu c97q9s0 c1wzad98 c1hqbfuk coxd2u7 c12hibr9 c143mjqv c5qlxwb c18rktfk c84wvpq c1dow46o c1wli87h c1lysizw cakwgzf c1609c0f c1hacr2f c1te2g72"
+              >
+                <div
+                  class="w-html-embed cuag7mm coihofk c10135pl c1dxatha c1wgy1la"
+                >
+                  <svg
+                    width="100%"
+                    height="100%"
+                    viewBox="0 0 17 23"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M14.072 8.52L13.176 15.32H15.544V17.88H12.824L12.168 23H9.16L9.832 17.88H5.784L5.112 23H2.104L2.776 17.88H0.488V15.32H3.112L4.04 8.52H1.672V5.944H4.376L5.032 0.919998H8.056L7.352 5.944H11.416L12.088 0.919998H15.096L14.408 5.944H16.728V8.52H14.072ZM6.12 15.32H10.168L11.08 8.52H7.016L6.12 15.32Z"
+                      fill="currentColor"
+                    ></path>
+                  </svg>
+                </div>
+                <span class="w-text">contact</span>
+              </h2>
+              <div style="display: contents">
+                <div style="display: contents">
+                  <hr
+                    data-ani="slide-right"
+                    class="w-separator c1yi5qyu c1ytdcb c1wzad98 c1hqbfuk"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="w-box cbdaw2e ch4e7df cgdwuqg c151fhok c1n7mlhy c14xocq1 cw1bgev c1i8wh09 c1c5np3u cvf6exy cd0gera"
+            >
+              <div
+                class="w-box c5qlxwb c1ebm6y8 c9nvcjk cgdwuqg c7tqq0f c84wvpq c1d4qond"
+              >
+                <p class="w-paragraph">
+                  I’m interested in freelance opportunities. However, if you
+                  have other request or question, don’t hesitate to contact me
+                </p>
+                <form class="w-webhook-form c1ytdcb">
+                  <div
+                    data-ani-children="true"
+                    data-ani="slide-up"
+                    class="w-box c5qlxwb c1ebm6y8 c9nvcjk cgdwuqg"
+                  >
+                    <div
+                      class="w-box c5qlxwb cusrxl6 c1iezziw c6doae3 c18sdt9r cck6uzs c12jt7do"
+                    >
+                      <div
+                        class="w-box c5qlxwb c18sdt9r c84wvpq c1ebm6y8 c1tg4ser c108ig08 clqr0ad c1hacr2f ciomlxa"
+                      >
+                        <label for="inputName" class="w-label">Name</label
+                        ><input
+                          placeholder="Name"
+                          required=""
+                          id="inputName"
+                          class="w-text-input c1v4r6fn cb1u3z0 c1966cit c1r2eu49 c1d1s2py c1pq52th c1gjlqb5 clfgpzr c1yyi63p c1ge8cp5 cp7jub0 c3i0ilk c1rnhgdq cn3jhj5 c1ma95da"
+                          name="name"
+                        />
+                      </div>
+                      <div
+                        class="w-box c5qlxwb c18sdt9r c84wvpq c1ebm6y8 c1tg4ser c108ig08 clqr0ad c1hacr2f ciomlxa"
+                      >
+                        <label for="inputEmail" class="w-label">Email</label
+                        ><input
+                          placeholder="Email"
+                          required=""
+                          type="email"
+                          id="inputEmail"
+                          class="w-text-input c1v4r6fn cb1u3z0 c1966cit c1r2eu49 c1d1s2py c1pq52th c1gjlqb5 clfgpzr c1yyi63p c1ge8cp5 cp7jub0 c3i0ilk c1rnhgdq cn3jhj5 c1ma95da"
+                          name="email"
+                        />
+                      </div>
+                    </div>
+                    <div
+                      class="w-box c5qlxwb cusrxl6 c1iezziw c6doae3 c18sdt9r cck6uzs c12jt7do"
+                    >
+                      <div
+                        class="w-box c5qlxwb c18sdt9r c84wvpq c1ebm6y8 c1tg4ser c108ig08 clqr0ad c1hacr2f ciomlxa"
+                      >
+                        <label for="inputMessage" class="w-label">Message</label
+                        ><textarea
+                          placeholder="Message"
+                          name="message"
+                          required=""
+                          id="inputMessage"
+                          class="w-text-area c1v4r6fn cb1u3z0 c1966cit c1r2eu49 c1d1s2py c1pq52th c1gjlqb5 clfgpzr c1yyi63p c1ge8cp5 cp7jub0 c3i0ilk c1rnhgdq cn3jhj5 c1ma95da"
+                        ></textarea>
+                      </div>
+                    </div>
+                    <button
+                      type="submit"
+                      class="w-button coxd2u7 c1d1s2py cg7zqae chmbpbm cvfgsu5 cca15wa cwjsmmv coihofk c18rktfk c1lb0b05 c1tg4ser c108ig08 c143mjqv c71wres c1vns2er c1jrnlve c6dwg1b c16iorcu ccubb4i c1occzaq c8u6n02 c4qo8cj clfgpzr c1blz2mu cs4dhp2 cs7du7t c4v99ao c60wk95"
+                    >
+                      Submit
+                    </button>
+                  </div>
+                </form>
+              </div>
+              <div class="w-box c5qlxwb c1ebm6y8 c84wvpq c1q07xnt co7mk2h">
+                <div
+                  class="w-box c5qlxwb cusrxl6 c7tqq0f c84wvpq cdl2bus cj34jm2 cg7zqae chmbpbm cml79pu c1ny9riq cft0hnr c1ydsexc cmjukhx c3a7o2y c1titcq8"
+                >
+                  <h3
+                    class="w-heading crenmre c97q9s0 c1wzad98 c1hqbfuk coxd2u7"
+                  >
+                    My Whereabouts
+                  </h3>
+                </div>
+                <div
+                  data-ani-children="true"
+                  data-ani="slide-up"
+                  class="w-box c5qlxwb cusrxl6 c1iezziw c6doae3 c7tqq0f c84wvpq cft0hnr ctp8r8l"
+                >
+                  <a
+                    href="https://discord.com/users/208128859659436033"
+                    class="w-link cgg0cjq coihofk corflgn czz9uik c17a9n8r c1jnjhm8 ce2rdc6 c15sv5nh cwjsmmv c1q66ssy c1g92ibl c1vhknwd c1r6fq11 cav5p01 ct23i2i ce1fn2e caf16cd c18rktfk c84wvpq cdl2bus cj34jm2 c4w9dvh cmnvdng c1ytdcb clfgpzr c1blz2mu c1uq1rj2 c1jzcjcx c7ndemy c1j1a12c crut9sn c27bmu1 cpehn13 cs4dhp2 cs7du7t"
+                    ><div
+                      class="w-box c1nk90pb che3jd7 c1w5h4gn co6lsyh c1bj05rc ch1cxiy c11efedb c1x0ieji c127kdo1"
+                    >
+                      <div class="w-html-embed">
+                        <svg
+                          width="100%"
+                          height="100%"
+                          viewBox="0 0 32 32"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M24.1641 7.65906C22.543 6.87826 20.8325 6.32099 19.0751 6.00114C19.0592 5.99832 19.0428 6.00076 19.0283 6.0081C19.0137 6.01544 19.0017 6.02733 18.9938 6.04214C18.7735 6.45211 18.5298 6.98835 18.3595 7.40816C16.4651 7.10643 14.5383 7.10643 12.6439 7.40816C12.4539 6.9405 12.239 6.48443 12.0002 6.04214C11.9922 6.02749 11.9801 6.01574 11.9656 6.00842C11.9511 6.0011 11.9348 5.99856 11.9189 6.00114C10.1611 6.31928 8.45021 6.87684 6.82991 7.65906C6.81605 7.66461 6.80445 7.67504 6.7971 7.68858C3.55651 12.7706 2.66745 17.7279 3.10339 22.623C3.10495 22.6459 3.11901 22.6689 3.1362 22.6836C5.02325 24.1507 7.13396 25.2708 9.37832 25.9962C9.39417 26.0014 9.4112 26.0013 9.42693 25.9957C9.44267 25.99 9.45629 25.9793 9.46582 25.965C9.94707 25.2763 10.3752 24.5498 10.7439 23.7856C10.7516 23.7699 10.7543 23.752 10.7514 23.7345C10.7486 23.7171 10.7405 23.7011 10.7283 23.6889C10.7202 23.6809 10.7107 23.6747 10.7002 23.6708C10.027 23.3993 9.37503 23.0731 8.7502 22.6951C8.73275 22.6847 8.71977 22.6677 8.71395 22.6476C8.70814 22.6274 8.70993 22.6057 8.71895 22.5869C8.72427 22.5747 8.73231 22.564 8.74239 22.5557C8.87364 22.4524 9.00489 22.3442 9.12989 22.236C9.14093 22.2266 9.15418 22.2206 9.16821 22.2186C9.18225 22.2166 9.19655 22.2186 9.20957 22.2245C13.3017 24.1858 17.7314 24.1858 21.7735 22.2245C21.787 22.2183 21.8018 22.2162 21.8164 22.2182C21.831 22.2202 21.8448 22.2264 21.8563 22.236C21.9813 22.3442 22.1126 22.4524 22.2438 22.5557C22.2544 22.5639 22.263 22.5747 22.2687 22.5872C22.2744 22.5996 22.277 22.6134 22.2764 22.6272C22.2758 22.641 22.2719 22.6544 22.2651 22.6663C22.2584 22.6781 22.2489 22.688 22.2376 22.6951C21.6142 23.0765 20.9614 23.4024 20.286 23.6692C20.2752 23.6733 20.2655 23.6798 20.2574 23.6883C20.2493 23.6968 20.243 23.7071 20.2391 23.7184C20.2355 23.7294 20.2341 23.741 20.2349 23.7525C20.2357 23.7641 20.2387 23.7754 20.2438 23.7856C20.6188 24.5482 21.0485 25.2763 21.5204 25.965C21.5299 25.9793 21.5435 25.99 21.5593 25.9957C21.575 26.0013 21.592 26.0014 21.6079 25.9962C23.856 25.2731 25.9701 24.1528 27.8594 22.6836C27.8688 22.6768 27.8767 22.6677 27.8824 22.6572C27.8881 22.6467 27.8914 22.635 27.8922 22.623C28.4141 16.9637 27.0188 12.0474 24.1954 7.69022C24.1925 7.68302 24.1883 7.67653 24.1829 7.67116C24.1775 7.66579 24.1711 7.66167 24.1641 7.65906ZM11.3549 19.6417C10.1221 19.6417 9.10801 18.4544 9.10801 16.9982C9.10801 15.5403 10.1033 14.353 11.3549 14.353C12.6158 14.353 13.6205 15.5502 13.6017 16.9982C13.6017 18.4544 12.6064 19.6417 11.3549 19.6417ZM19.661 19.6417C18.4298 19.6417 17.4142 18.4544 17.4142 16.9982C17.4142 15.5403 18.4095 14.353 19.661 14.353C20.922 14.353 21.9282 15.5502 21.9079 16.9982C21.9079 18.4544 20.922 19.6417 19.661 19.6417Z"
+                            fill="currentColor"
+                          ></path>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="w-box c5qlxwb c1ebm6y8 c7tqq0f c8svf47 cmnvdng">
+                      <span class="w-text c71wres">Discord</span>
+                    </div></a
+                  ><a
+                    href="mailto:Nick@FairTech.space?subject=Website+Contact"
+                    class="w-link cgg0cjq coihofk corflgn czz9uik c17a9n8r c1jnjhm8 ce2rdc6 c15sv5nh cwjsmmv c1q66ssy c1g92ibl c1vhknwd c1r6fq11 cav5p01 ct23i2i ce1fn2e caf16cd c18rktfk c84wvpq cdl2bus cj34jm2 c4w9dvh cmnvdng c1ytdcb clfgpzr c1blz2mu c1uq1rj2 c1jzcjcx c7ndemy c1j1a12c crut9sn c27bmu1 cpehn13 cs4dhp2 cs7du7t"
+                    ><div
+                      class="w-box c1nk90pb che3jd7 c1w5h4gn co6lsyh c1bj05rc ch1cxiy c11efedb c1x0ieji c127kdo1"
+                    >
+                      <div class="w-html-embed">
+                        <svg
+                          width="100%"
+                          height="100%"
+                          viewBox="0 0 32 32"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M5.07187 9.20292C5.2168 8.57709 5.57307 8.01832 6.08232 7.6181C6.59158 7.21789 7.22365 6.99996 7.875 7H25.125C25.7764 6.99996 26.4084 7.21789 26.9177 7.6181C27.4269 8.01832 27.7832 8.57709 27.9281 9.20292L16.5 16.0865L5.07187 9.20292ZM5 10.8207V20.8847L13.3418 15.8442L5 10.8207ZM14.7189 16.6758L5.27456 22.3807C5.50791 22.8657 5.87619 23.2753 6.33656 23.5619C6.79693 23.8486 7.33044 24.0005 7.875 24H25.125C25.6695 24.0001 26.2028 23.8479 26.6629 23.561C27.123 23.274 27.491 22.8643 27.724 22.3793L18.2796 16.6744L16.5 17.7468L14.7189 16.6744V16.6758ZM19.6582 15.8457L28 20.8847V10.8207L19.6582 15.8442V15.8457Z"
+                            fill="currentColor"
+                          ></path>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="w-box c5qlxwb c1ebm6y8 c7tqq0f c8svf47 cmnvdng">
+                      <span class="w-text c71wres">Email</span>
+                    </div></a
+                  ><a
+                    href="https://webstudio.is/?via=badge"
+                    target="_blank"
+                    class="w-element coihofk c1spjn3h c1js0dbz c18rktfk c1lb0b05 c1yfl7fw c17upjyc c17g8len c346weh cl7sjn9 cqhzwpy c1oedjnc c97q9s0 c19y7ny7 c1pr0hk1 c1g7zfdw cuxqpc1 cpzke37 cwjsmmv c1vvo7f6 c1l8z3sh cr9qvce cl6j2vi c1r4cbti cvex6te"
+                    ><div
+                      class="w-html-embed c15f6g5a c1w0z2ud c2mvcfb c1hacr2f"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        viewBox="0 0 16 16"
+                        width="100%"
+                        height="100%"
+                        style="display: block"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="m12.32 12.416 2.62-8.085a1.205 1.205 0 1 0-2.292-.746l-2.62 8.084a1.205 1.205 0 1 0 2.292.747Z"
+                          clip-rule="evenodd"
+                        />
+                        <path
+                          fill-rule="evenodd"
+                          d="M8 7.624c.297 0 .517.175.704.394.207.243.373.545.514.866.634 1.44.753 3.241.753 3.241a1.206 1.206 0 0 0 1.285 1.122 1.207 1.207 0 0 0 1.12-1.287s-.16-2.25-.952-4.05C10.744 6.364 9.594 5.208 8 5.208c-1.594 0-2.744 1.156-3.424 2.7-.792 1.8-.951 4.05-.951 4.05a1.207 1.207 0 0 0 1.12 1.288 1.206 1.206 0 0 0 1.284-1.122s.119-1.8.753-3.24a3.52 3.52 0 0 1 .514-.867c.187-.22.406-.394.704-.394Z"
+                          clip-rule="evenodd"
+                        />
+                        <path
+                          fill-rule="evenodd"
+                          d="M5.973 11.669 3.352 3.585a1.205 1.205 0 1 0-2.293.746l2.622 8.084a1.205 1.205 0 1 0 2.292-.746Z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                    <div class="w-element">Built with Webstudio</div></a
+                  ><a
+                    href="https://github.com/Fair-Tech"
+                    class="w-link cgg0cjq coihofk corflgn czz9uik c17a9n8r c1jnjhm8 ce2rdc6 c15sv5nh cwjsmmv c1q66ssy c1g92ibl c1vhknwd c1r6fq11 cav5p01 ct23i2i ce1fn2e caf16cd c18rktfk c84wvpq cdl2bus cj34jm2 c4w9dvh cmnvdng c1ytdcb clfgpzr c1blz2mu c1uq1rj2 c1jzcjcx c7ndemy c1j1a12c crut9sn c27bmu1 cpehn13 cs4dhp2 cs7du7t"
+                    ><div
+                      class="w-box c1nk90pb che3jd7 c1w5h4gn co6lsyh c1bj05rc ch1cxiy c11efedb c1x0ieji c127kdo1"
+                    >
+                      <div class="w-html-embed">
+                        <svg
+                          width="100%"
+                          height="100%"
+                          viewBox="0 0 32 32"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M15.5 6C9.69875 6 5 10.5882 5 16.2529C5 20.7899 8.00562 24.6219 12.1794 25.9804C12.7044 26.0701 12.9012 25.7625 12.9012 25.4934C12.9012 25.2499 12.8881 24.4425 12.8881 23.5838C10.25 24.058 9.5675 22.9558 9.3575 22.3791C9.23938 22.0843 8.7275 21.1743 8.28125 20.9308C7.91375 20.7386 7.38875 20.2644 8.26813 20.2516C9.095 20.2388 9.68563 20.9949 9.8825 21.3025C10.8275 22.8533 12.3369 22.4175 12.9406 22.1484C13.0325 21.4819 13.3081 21.0334 13.61 20.777C11.2737 20.5207 8.8325 19.6364 8.8325 15.7147C8.8325 14.5997 9.23938 13.6769 9.90875 12.9592C9.80375 12.7029 9.43625 11.6519 10.0138 10.2422C10.0138 10.2422 10.8931 9.97301 12.9012 11.2931C13.7413 11.0624 14.6338 10.947 15.5263 10.947C16.4188 10.947 17.3113 11.0624 18.1513 11.2931C20.1594 9.9602 21.0387 10.2422 21.0387 10.2422C21.6163 11.6519 21.2488 12.7029 21.1438 12.9592C21.8131 13.6769 22.22 14.5868 22.22 15.7147C22.22 19.6492 19.7656 20.5207 17.4294 20.777C17.81 21.0975 18.1381 21.7126 18.1381 22.6738C18.1381 24.0452 18.125 25.1474 18.125 25.4934C18.125 25.7625 18.3219 26.0829 18.8469 25.9804C20.9314 25.2935 22.7428 23.9854 24.026 22.2403C25.3092 20.4953 25.9996 18.4012 26 16.2529C26 10.5882 21.3013 6 15.5 6Z"
+                            fill="currentColor"
+                          ></path>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="w-box c5qlxwb c1ebm6y8 c7tqq0f c8svf47 cmnvdng">
+                      <span class="w-text c71wres">GitHub</span>
+                    </div></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <div style="display: contents">
+        <div style="display: contents">
+          <footer class="w-box ccimwqw cx8cst7">
+            <div
+              class="w-box c9ym0ht cnkzzro c1ytdcb c1ld5qzg c5qlxwb c1ebm6y8 c18rktfk c84wvpq c9nvcjk cgdwuqg c18o2ure cokip0u"
+            >
+              <div style="display: contents">
+                <div style="display: contents">
+                  <a
+                    aria-label="Home"
+                    class="w-link c1z4wil c1kaols7 corflgn czz9uik c17a9n8r c1jnjhm8 ce2rdc6 c10kcbz9 cwjsmmv c1q66ssy c1g92ibl c1vhknwd c1r6fq11 cav5p01 ct23i2i ce1fn2e caf16cd c1wgy1la clfgpzr c1blz2mu cuxt05h c1jzcjcx c10yyzu5 c6wijbx cfdj4kt c3rb8d cs4dhp2 cs7du7t"
+                    href="#"
+                    ><img
+                      alt=""
+                      width="67"
+                      height="67"
+                      src="/assets/FairTech_raMC7uHiQEOXX9JDI2FdR.png"
+                      class="w-image cfhwoz3 cbgxh3d c1sebl0 c19i8p8w"
+                      sizes="100vw"
+                      srcset="
+                        /assets/FairTech_raMC7uHiQEOXX9JDI2FdR.png  16w,
+                        /assets/FairTech_raMC7uHiQEOXX9JDI2FdR.png  32w,
+                        /assets/FairTech_raMC7uHiQEOXX9JDI2FdR.png  48w,
+                        /assets/FairTech_raMC7uHiQEOXX9JDI2FdR.png  64w,
+                        /assets/FairTech_raMC7uHiQEOXX9JDI2FdR.png  96w,
+                        /assets/FairTech_raMC7uHiQEOXX9JDI2FdR.png 128w,
+                        /assets/FairTech_raMC7uHiQEOXX9JDI2FdR.png 256w
+                      "
+                      decoding="async"
+                      loading="eager"
+                  /></a>
+                </div>
+              </div>
+              <p class="w-paragraph">FairTech US - Developing Creatively</p>
+              <a
+                href="mailto:Nick@FairTech.space?subject=Website+Contact"
+                class="w-link cgg0cjq coihofk corflgn czz9uik c17a9n8r c1jnjhm8 ce2rdc6 c15sv5nh cwjsmmv c1q66ssy c1g92ibl c1vhknwd c1r6fq11 cav5p01 ct23i2i ce1fn2e caf16cd c18rktfk c84wvpq cdl2bus cj34jm2 c4w9dvh c1wgy1la cmx0y4p clfgpzr c1blz2mu c1uq1rj2 c1jzcjcx c7ndemy c1j1a12c crut9sn c27bmu1 cpehn13 cs4dhp2 cs7du7t"
+                ><div
+                  class="w-box c1nk90pb che3jd7 c1w5h4gn co6lsyh c1bj05rc ch1cxiy c11efedb c1x0ieji c127kdo1"
+                >
+                  <div class="w-html-embed">
+                    <svg
+                      width="100%"
+                      height="100%"
+                      viewBox="0 0 32 32"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M5.07187 9.20292C5.2168 8.57709 5.57307 8.01832 6.08232 7.6181C6.59158 7.21789 7.22365 6.99996 7.875 7H25.125C25.7764 6.99996 26.4084 7.21789 26.9177 7.6181C27.4269 8.01832 27.7832 8.57709 27.9281 9.20292L16.5 16.0865L5.07187 9.20292ZM5 10.8207V20.8847L13.3418 15.8442L5 10.8207ZM14.7189 16.6758L5.27456 22.3807C5.50791 22.8657 5.87619 23.2753 6.33656 23.5619C6.79693 23.8486 7.33044 24.0005 7.875 24H25.125C25.6695 24.0001 26.2028 23.8479 26.6629 23.561C27.123 23.274 27.491 22.8643 27.724 22.3793L18.2796 16.6744L16.5 17.7468L14.7189 16.6744V16.6758ZM19.6582 15.8457L28 20.8847V10.8207L19.6582 15.8442V15.8457Z"
+                        fill="currentColor"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="w-box c5qlxwb c1ebm6y8 c7tqq0f c8svf47 cmnvdng">
+                  <span class="w-text c71wres">Nick@fairtech.space</span>
+                </div></a
+              >
+              <div
+                class="w-box c5qlxwb c9nvcjk cgdwuqg cft0hnr csugbjy cy9vji4 co7d4cl"
+              >
+                <div class="w-text">© 2025 FairTech US</div>
+              </div>
+            </div>
+          </footer>
+          <div style="display: contents">
+            <div style="display: contents">
+              <div class="w-html-embed">
+                <style>
+                  :root {
+                    --ani-duration: var(--duration-default, 0.2s);
+                    --ani-delay: 0s;
+                    --ani-slide-offset: 20%;
+                    --ani-zoom-in-scale: 1;
+                    --ani-zoom-out-scale: 0.85;
+                    --ani-flip-rotate: 30deg;
+                    --ani-easing: var(--easing-fun, ease);
+                    --ani-fill-mode: forwards;
+                  }
+                  [data-ani]:not([data-ani-children]),
+                  [data-ani-children]:not([data-ani-progress]) > * {
+                    animation-duration: var(--ani-duration);
+                    animation-delay: var(--ani-delay);
+                    animation-timing-function: var(--ani-easing);
+                    animation-fill-mode: var(--ani-fill-mode);
+                    opacity: 0;
+                  }
+                  [data-ani-progress]:not([data-ani-children]),
+                  [data-ani-children]:not([data-ani]) > * {
+                    transition-property: opacity, transform;
+                    transition-duration: var(--ani-duration);
+                    transition-timing-function: var(--ani-easing);
+                    opacity: 0;
+                  }
+                  @keyframes fadeIn {
+                    from {
+                      opacity: 0;
+                    }
+                    to {
+                      opacity: 1;
+                    }
+                  }
+                  @keyframes fadeOut {
+                    from {
+                      opacity: 1;
+                    }
+                    to {
+                      opacity: 0;
+                    }
+                  }
+                  [data-ani-children][data-ani="fade"] > .in,
+                  [data-ani="fade"]:where(
+                      .in:not([data-state]),
+                      [data-state$="open"],
+                      [data-state="active"]
+                    ) {
+                    animation-name: fadeIn;
+                  }
+                  [data-ani-children][data-ani="fade"] > .out,
+                  [data-ani="fade"]:where(
+                      .out:not([data-state]),
+                      [data-state="closed"],
+                      [data-state="inactive"]
+                    ) {
+                    animation-name: fadeOut;
+                  }
+                  @keyframes slideIn {
+                    from {
+                      opacity: 0;
+                      translate: var(--ani-slide-transform);
+                    }
+                    to {
+                      opacity: 1;
+                      translate: none;
+                    }
+                  }
+                  @keyframes slideOut {
+                    from {
+                      opacity: 1;
+                      translate: none;
+                    }
+                    to {
+                      opacity: 0;
+                      translate: var(--ani-slide-transform);
+                    }
+                  }
+                  [data-ani-children][data-ani|="slide"] > .in,
+                  [data-ani|="slide"]:where(
+                      .in:not([data-state]),
+                      [data-state$="open"],
+                      [data-state="active"]
+                    ) {
+                    animation-name: slideIn;
+                  }
+                  [data-ani-children][data-ani|="slide"] > .out,
+                  [data-ani|="slide"]:where(
+                      .out:not([data-state]),
+                      [data-state="closed"],
+                      [data-state="inactive"]
+                    ) {
+                    animation-name: slideOut;
+                  }
+                  [data-ani="slide-up"] {
+                    --ani-slide-transform: 0 var(--ani-slide-offset);
+                  }
+                  [data-ani="slide-down"] {
+                    --ani-slide-transform: 0 calc(-1 * var(--ani-slide-offset));
+                  }
+                  [data-ani="slide-left"] {
+                    --ani-slide-transform: var(--ani-slide-offset);
+                  }
+                  [data-ani="slide-right"] {
+                    --ani-slide-transform: calc(-1 * var(--ani-slide-offset));
+                  }
+                  @keyframes zoomIn {
+                    from {
+                      opacity: 0;
+                      scale: var(--ani-zoom-out-scale);
+                    }
+                    to {
+                      opacity: 1;
+                      scale: 1;
+                    }
+                  }
+                  @keyframes zoomOut {
+                    from {
+                      opacity: 1;
+                      scale: 1;
+                    }
+                    to {
+                      opacity: 0;
+                      scale: var(--ani-zoom-in-scale);
+                    }
+                  }
+                  [data-ani-children][data-ani="zoom"] > .in,
+                  [data-ani|="zoom"]:where(
+                      .in:not([data-state]),
+                      [data-state$="open"],
+                      [data-state="active"]
+                    ) {
+                    animation-name: zoomIn;
+                  }
+                  [data-ani-children][data-ani="zoom"] > .out,
+                  [data-ani|="zoom"]:where(
+                      .out:not([data-state]),
+                      [data-state="closed"],
+                      [data-state="inactive"]
+                    ) {
+                    animation-name: zoomOut;
+                  }
+                  [data-ani-children][data-ani-progress="zoom"] > *,
+                  [data-ani-progress="zoom"]:not([data-ani-children]) {
+                    transform: scale(var(--ani-zoom-out-scale));
+                  }
+                  @keyframes flipInY {
+                    from {
+                      rotate: y var(--ani-flip-rotate);
+                      perspective: 2000px;
+                      opacity: 0;
+                    }
+                    to {
+                      rotate: y 0;
+                      opacity: 1;
+                    }
+                  }
+                  @keyframes flipOutY {
+                    from {
+                      rotate: y 0;
+                      opacity: 1;
+                    }
+                    to {
+                      perspective: 2000px;
+                      rotate: y var(--ani-flip-rotate);
+                      opacity: 0;
+                    }
+                  }
+                  @keyframes flipInX {
+                    from {
+                      perspective: 2000px;
+                      rotate: x var(--ani-flip-rotate);
+                      opacity: 0;
+                    }
+                    to {
+                      rotate: x 0;
+                      opacity: 1;
+                    }
+                  }
+                  @keyframes flipOutX {
+                    from {
+                      rotate: x 0;
+                      opacity: 1;
+                    }
+                    to {
+                      perspective: 2000px;
+                      rotate: x var(--ani-flip-rotate);
+                      opacity: 0;
+                    }
+                  }
+                  [data-ani-children][data-ani="flip-y"] > .in,
+                  [data-ani="flip-y"]:where(
+                      .in:not([data-state]),
+                      [data-state$="open"],
+                      [data-state="active"]
+                    ) {
+                    animation-name: flipInY;
+                  }
+                  [data-ani-children][data-ani="flip-x"] > .in,
+                  [data-ani="flip-x"]:where(
+                      .in:not([data-state]),
+                      [data-state$="open"],
+                      [data-state="active"]
+                    ) {
+                    animation-name: flipInX;
+                  }
+                  [data-ani-children][data-ani="flip-y"] > .out,
+                  [data-ani="flip-y"]:where(
+                      .out:not([data-state]),
+                      [data-state="closed"],
+                      [data-state="inactive"]
+                    ) {
+                    animation-name: flipOutY;
+                  }
+                  [data-ani-children][data-ani="flip-x"] > .out,
+                  [data-ani="flip-x"]:where(
+                      .out:not([data-state]),
+                      [data-state="closed"],
+                      [data-state="inactive"]
+                    ) {
+                    animation-name: flipOutX;
+                  }
+                  @keyframes expandDown {
+                    from {
+                      height: 0;
+                    }
+                    to {
+                      height: var(--newHeight);
+                    }
+                  }
+                  @keyframes expandUp {
+                    from {
+                      height: var(--newHeight);
+                    }
+                    to {
+                      height: 0;
+                    }
+                  }
+                  [data-ani="expand"],
+                  [data-ani="expand"][data-state="open"],
+                  [data-ani="expand"].in {
+                    --newHeight: var(
+                      --custom-height,
+                      var(
+                        --radix-accordion-content-height,
+                        var(--radix-collapsible-content-height, 100%)
+                      )
+                    );
+                    overflow: hidden;
+                    opacity: 1;
+                  }
+                  [data-ani-children][data-ani="expand"] > .in,
+                  [data-ani="expand"]:where(
+                      .in:not([data-state]),
+                      [data-state$="open"],
+                      [data-state="active"]
+                    ) {
+                    animation: expandDown var(--ani-duration) var(--ani-easing);
+                  }
+                  [data-ani-children][data-ani="expand"] > .out,
+                  [data-ani="expand"]:where(
+                      .out:not([data-state]),
+                      [data-state="closed"],
+                      [data-state="inactive"]
+                    ) {
+                    animation: expandUp var(--ani-duration) var(--ani-easing);
+                  }
+                  @media (prefers-reduced-motion: reduce) {
+                    [data-ani]:not([data-ani-children]),
+                    [data-ani-progress]:not([data-ani-children]),
+                    [data-ani-children] > * {
+                      opacity: 1;
+                      transform: none;
+                      animation: none;
+                      rotate: none;
+                      scale: none;
+                      translate: none;
+                    }
+                  }
+                </style>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script id="vike_pageContext" type="application/json">
+      {
+        "_urlRewrite": null,
+        "pageId": "/pages/index",
+        "routeParams": {},
+        "data": {
+          "url": "https://url/",
+          "system": { "params": {}, "search": {}, "origin": "https://url" },
+          "resources": {},
+          "pageMeta": {
+            "title": "FairTech - Developing Creatively",
+            "description": "Crafting unique experiences where technologies meet creativity!",
+            "excludePageFromSearch": false,
+            "language": "!undefined",
+            "socialImageAssetName": "FairTech_CoverScreen_iWd0Z5UEngzd-bIV1kx1u.jpg",
+            "socialImageUrl": "!undefined",
+            "status": "!undefined",
+            "redirect": "!undefined",
+            "custom": []
+          }
+        }
+      }
+    </script>
+    <script id="vike_globalContext" type="application/json">
+      {}
+    </script>
+    <script
+      src="/assets/entries/entry-server-routing.CVre7FEg.js"
+      type="module"
+      async
+    ></script>
+    <link
+      rel="modulepreload"
+      href="/assets/entries/pages_index.CRi7sXR-.js"
+      as="script"
+      type="text/javascript"
+    />
+  </body>
 </html>
